@@ -22,3 +22,7 @@ header {
 .grid > .col:last-child { 
     flex-basis: 30%;
 }
+
+mat-form-field {
+    width: 100%
+}

@@ -8,13 +8,22 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CompraComponent implements OnInit {
   dadosPessoaisFormGroup!: FormGroup;
+  detalhesPagamentoFormGroup!: FormGroup;
 
   constructor(private builder: FormBuilder) { }
 
   ngOnInit(): void {
     this.dadosPessoaisFormGroup = this.builder.group({
       nome: ['', Validators.required],
-      email: ['', Validators.compose([Validators.required, Validators.email])]
+      email: ['', [Validators.required, Validators.email]]
+    });
+
+    this.detalhesPagamentoFormGroup = this.builder.group({
+      cpf: ['', [Validators.required, Validators.pattern(/\d{11}/)]],
+      titular: ['', Validators.required],
+      numero: ['', [Validators.required, Validators.pattern(/\d{14,16}/)]],
+      dataExpiracao: ['', Validators.required],
+      cvv: ['', [Validators.required, Validators.pattern(/\d{3,4}/)]]
     });
   }
 

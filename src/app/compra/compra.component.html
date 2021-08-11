@@ -7,8 +7,8 @@
             <mat-step label="Dados pessoais" [stepControl]="dadosPessoaisFormGroup">
               <app-dados-pessoais [formGroup]="dadosPessoaisFormGroup" [stepper]="stepper"></app-dados-pessoais>
             </mat-step>
-            <mat-step label="Detalhes de pagamento">
-              <div>Detalhes de pagto</div>
+            <mat-step label="Detalhes de pagamento" [stepControl]="detalhesPagamentoFormGroup">
+              <app-detalhes-pagamento [formGroup]="detalhesPagamentoFormGroup" [stepper]="stepper" [email]="dadosPessoaisFormGroup?.get('email')?.value"></app-detalhes-pagamento>
             </mat-step>
             <mat-step label="Fim">
               <p>Fim</p>
