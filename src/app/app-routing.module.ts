@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'compra',
     loadChildren: () => import('./compra/compra.module').then(m => m.CompraModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
   }
 ];
 
