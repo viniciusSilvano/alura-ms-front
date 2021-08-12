@@ -11,11 +11,11 @@
               <app-detalhes-pagamento [formGroup]="detalhesPagamentoFormGroup" [stepper]="stepper" [email]="dadosPessoaisFormGroup?.get('email')?.value"></app-detalhes-pagamento>
             </mat-step>
             <mat-step label="Fim">
-              <p>Fim</p>
+              <app-fim></app-fim>
             </mat-step>
         </mat-stepper>
     </div>
-    
+
     <div class="col">
       <mat-card>
         <mat-card-title-group>
@@ -27,9 +27,9 @@
           </mat-card-subtitle>
         </mat-card-title-group>
         <mat-card-content>
-          Valor total do plano <b>R$ 123,45</b>
+          <p>Valor total do plano <b>R$ 123,45</b></p>
 
-          1234 cursos
+          <p>1234 cursos</p>
           <mat-list>
             <mat-list-item>- Estude por 1 ano</mat-list-item>
             <mat-list-item>- Certificado de participação</mat-list-item>

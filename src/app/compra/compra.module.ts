@@ -15,13 +15,15 @@ import { DadosPessoaisComponent } from './dados-pessoais/dados-pessoais.componen
 import { DadosPessoaisService } from './dados-pessoais/dados-pessoais.service';
 import { DetalhesPagamentoComponent } from './detalhes-pagamento/detalhes-pagamento.component';
 import { DetalhesPagamentoService } from './detalhes-pagamento/detalhes-pagamento.service';
+import { FimComponent } from './fim/fim.component';
 
 
 @NgModule({
   declarations: [
     CompraComponent,
     DadosPessoaisComponent,
-    DetalhesPagamentoComponent
+    DetalhesPagamentoComponent,
+    FimComponent
   ],
   imports: [
     CommonModule,
