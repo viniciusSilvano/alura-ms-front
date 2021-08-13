@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {ActivatedRouteSnapshot, CanActivate, RouterModule, RouterStateSnapshot, Routes, UrlTree} from '@angular/router';
+import {Observable} from "rxjs";
+import {TokenService} from "./token.service";
+import {GuardService} from "./guard.service";
 
 const routes: Routes = [
   {
@@ -14,6 +17,11 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
+  },
+  {
+    path: 'cursos',
+    loadChildren: () => import('./area-logada/area-logada.module').then(m => m.AreaLogadaModule),
+    canActivate: [GuardService],
   }
 ];
 
